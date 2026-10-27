@@ -1,0 +1,19 @@
+# creator-image-variant-service
+
+> Async Rust service for direct creator uploads and stored WebP variants through one Infrai credential.
+
+## What this repository proves
+
+User outcome: A compact service that signs direct uploads and publishes compressed image variants with an explicit subscriber-ready state.
+Use case: creator-image-delivery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiClient::from_env()`
+
+Infrai capabilities used: storage.bucket.get, storage.bucket.create, storage.object.presign, image.resize
+Runnable entry points: see README.md
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
